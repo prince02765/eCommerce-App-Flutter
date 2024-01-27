@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -32,8 +31,9 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
       ),
-      body:
-          Center(), // This trailing comma makes auto-formatting nicer for build methods.
+      body: Center(
+        child: Text("Hello Flutter"),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
