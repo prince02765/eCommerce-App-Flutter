@@ -1,8 +1,8 @@
 import 'package:ecommerce_app/features/authentication/controller.onboarding/onboarding_controller.dart';
-import 'package:ecommerce_app/features/authentication/screens.onboarding/widgets/onboarding_dot_nav.dart';
-import 'package:ecommerce_app/features/authentication/screens.onboarding/widgets/onboarding_next_button.dart';
-import 'package:ecommerce_app/features/authentication/screens.onboarding/widgets/onboarding_page.dart';
-import 'package:ecommerce_app/features/authentication/screens.onboarding/widgets/onboarding_skip.dart';
+import 'package:ecommerce_app/features/authentication/screens/onbarding/widgets/onboarding_dot_nav.dart';
+import 'package:ecommerce_app/features/authentication/screens/onbarding/widgets/onboarding_next_button.dart';
+import 'package:ecommerce_app/features/authentication/screens/onbarding/widgets/onboarding_page.dart';
+import 'package:ecommerce_app/features/authentication/screens/onbarding/widgets/onboarding_skip.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/constants/text_strings.dart';
