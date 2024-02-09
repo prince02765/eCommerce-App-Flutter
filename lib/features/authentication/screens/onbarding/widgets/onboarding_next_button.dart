@@ -5,7 +5,7 @@ import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../controller.onboarding/onboarding_controller.dart';
+import '../../../controller/onbording/onboarding_controller.dart';
 
 class OnBoardingNextButton extends StatelessWidget {
   const OnBoardingNextButton({Key? key}) : super(key: key);

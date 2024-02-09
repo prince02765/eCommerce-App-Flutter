@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/features/authentication/controller.onboarding/onboarding_controller.dart';
+import 'package:ecommerce_app/features/authentication/controller/onbording/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/sizes.dart';
