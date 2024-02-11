@@ -51,6 +51,7 @@ class HomeScreen extends StatelessWidget {
                           title: "Popular Categories",
                           showActionButton: false,
                           textColor: TColors.white,
+                          onPressed: () {},
                         ),
                         SizedBox(
                           height: TSizes.spaceBtwItems,
