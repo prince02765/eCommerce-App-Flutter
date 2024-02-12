@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
-import '../../../../common/widgets/images/t_rounded_image.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 
