@@ -2,11 +2,13 @@ import 'package:ecommerce_app/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:ecommerce_app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
-import 'package:ecommerce_app/utils/constants/colors.dart';
+import 'package:ecommerce_app/features/personalization/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
+import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -34,8 +36,10 @@ class SettingScreen extends StatelessWidget {
                 ),
 
                 // User Profile card
-                const TUserProfileTile(),
-                const SizedBox(
+                TUserProfileTile(
+                  onPressed: () => Get.to(() => ProfileScreen()),
+                ),
+                SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
 
@@ -44,59 +48,59 @@ class SettingScreen extends StatelessWidget {
             )),
             // Body
             Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              padding: EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
                   // Account Settings
-                  const TSectionHeading(
+                  TSectionHeading(
                     title: "Account Settings",
                     showActionButton: false,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
 
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.safe_home,
                       title: "My Address",
                       subTitle: "Set shopping delivery address"),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.shopping_cart,
                       title: "My Cart",
                       subTitle: "Add, remove products and move to checkout"),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.bag_tick,
                       title: "My Orders",
                       subTitle: "In-proccess and Completed Orders"),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.bank,
                       title: "Bank Account",
                       subTitle: "Withdrow balance to registered bank account"),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.discount_shape,
                       title: "My Coupons",
                       subTitle: "List of all the discounted coupons"),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.notification,
                       title: "Notification",
                       subTitle: "Set any kind of notification message"),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.security_card,
                       title: "Acount Privacy",
                       subTitle: "Manage data usage and conected accouts"),
 
                   // App Settings
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                  const TSectionHeading(
+                  TSectionHeading(
                     title: "App Settings",
                     showActionButton: false,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                       icon: Iconsax.document_upload,
                       title: "Load Data",
                       subTitle: "Upload Data to your Cloud Firebase"),
@@ -120,15 +124,15 @@ class SettingScreen extends StatelessWidget {
                   ),
 
                   // Logout Button
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(
-                        onPressed: () {}, child: const Text("Logout")),
+                    child:
+                        OutlinedButton(onPressed: () {}, child: Text("Logout")),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwSections * 2,
                   ),
                 ],
