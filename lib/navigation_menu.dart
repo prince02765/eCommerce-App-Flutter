@@ -1,9 +1,9 @@
-import 'package:ecommerce_app/features/personalization/screens/settings/setting.dart';
-import 'package:ecommerce_app/features/shop/screens/home/home.dart';
-import 'package:ecommerce_app/features/shop/screens/store/store.dart';
-import 'package:ecommerce_app/features/shop/screens/wishlist/wishlist.dart';
-import 'package:ecommerce_app/utils/constants/colors.dart';
-import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
+import 'features/personalization/screens/settings/setting.dart';
+import 'features/shop/screens/home/home.dart';
+import 'features/shop/screens/store/store.dart';
+import 'features/shop/screens/wishlist/wishlist.dart';
+import 'utils/constants/colors.dart';
+import 'utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

@@ -1,10 +1,10 @@
-import 'package:ecommerce_app/common/widgets/products/product_cards/product_card_vertical.dart';
-import 'package:ecommerce_app/features/shop/screens/home/widget/home_appbar.dart';
-import 'package:ecommerce_app/features/shop/screens/home/widget/home_categories.dart';
-import 'package:ecommerce_app/features/shop/screens/home/widget/promo_slider.dart';
-import 'package:ecommerce_app/utils/constants/colors.dart';
-import 'package:ecommerce_app/utils/constants/image_strings.dart';
-import 'package:ecommerce_app/utils/constants/sizes.dart';
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
+import 'widget/home_appbar.dart';
+import 'widget/home_categories.dart';
+import 'widget/promo_slider.dart';
+import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';

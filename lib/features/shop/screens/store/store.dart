@@ -1,11 +1,11 @@
-import 'package:ecommerce_app/common/widgets/appbar/TTabbar.dart';
-import 'package:ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:ecommerce_app/common/widgets/layouts/grid_layout.dart';
-import 'package:ecommerce_app/common/widgets/products/cart/cart_menu_icon.dart';
-import 'package:ecommerce_app/features/shop/screens/store/widgets/category_tab.dart';
-import 'package:ecommerce_app/utils/constants/colors.dart';
-import 'package:ecommerce_app/utils/constants/sizes.dart';
-import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
+import '../../../../common/widgets/appbar/TTabbar.dart';
+import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
+import 'widgets/category_tab.dart';
+import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../../../utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';

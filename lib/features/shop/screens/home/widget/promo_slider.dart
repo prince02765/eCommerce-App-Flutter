@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce_app/features/shop/controller/home_controller.dart';
-import 'package:ecommerce_app/utils/constants/colors.dart';
+import '../../../controller/home_controller.dart';
+import '../../../../../utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

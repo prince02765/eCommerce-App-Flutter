@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/common/widgets/texts/t_brand_title_text.dart';
+import 't_brand_title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
