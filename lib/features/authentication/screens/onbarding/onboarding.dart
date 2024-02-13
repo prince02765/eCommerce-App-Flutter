@@ -4,10 +4,7 @@ import 'package:ecommerce_app/features/authentication/screens/onbarding/widgets/
 import 'package:ecommerce_app/features/authentication/screens/onbarding/widgets/onboarding_page.dart';
 import 'package:ecommerce_app/features/authentication/screens/onbarding/widgets/onboarding_skip.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
-import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/constants/text_strings.dart';
-import 'package:ecommerce_app/utils/device/device_utility.dart';
-import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -24,7 +21,7 @@ class OnBoardingScreen extends StatelessWidget {
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
-            children: [
+            children: const [
               OnBoardingPage(
                 image: TImages.onBoardingImage1,
                 title: TTexts.onBoardingTitle1,
@@ -42,9 +39,9 @@ class OnBoardingScreen extends StatelessWidget {
               ),
             ],
           ),
-          OnBoardingSkip(),
-          OnBoardDotNavigation(),
-          OnBoardingNextButton(),
+          const OnBoardingSkip(),
+          const OnBoardDotNavigation(),
+          const OnBoardingNextButton(),
         ],
       ),
     );

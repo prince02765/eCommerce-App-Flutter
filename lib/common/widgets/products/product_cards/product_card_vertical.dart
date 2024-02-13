@@ -1,9 +1,7 @@
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce_app/common/widgets/images/t_rounded_image.dart';
 import 'package:ecommerce_app/common/widgets/texts/product_title.text.dart';
-import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
-import 'package:ecommerce_app/utils/constants/enums.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
@@ -25,7 +23,7 @@ class TProductCardVertical extends StatelessWidget {
       onTap: () {},
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(1),
+        padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(TSizes.productImageRadius),
@@ -36,12 +34,12 @@ class TProductCardVertical extends StatelessWidget {
             // Thumbnail
             TRoundedContainer(
               height: 180,
-              padding: EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
                   // Thumbnail Iamge
-                  TRoundedImage(
+                  const TRoundedImage(
                     imageUrl: TImages.productImage1,
                     applyImageRadius: true,
                   ),
@@ -52,7 +50,7 @@ class TProductCardVertical extends StatelessWidget {
                       child: TRoundedContainer(
                         radius: TSizes.sm,
                         backgroundColor: TColors.secondary.withOpacity(0.8),
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                             horizontal: TSizes.sm, vertical: TSizes.xs),
                         child: Text(
                           "25%",
@@ -64,7 +62,7 @@ class TProductCardVertical extends StatelessWidget {
                       )),
 
                   // Favourite Icon Button
-                  Positioned(
+                  const Positioned(
                     top: 0,
                     right: 0,
                     child: TCircularIcon(
@@ -76,11 +74,11 @@ class TProductCardVertical extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: TSizes.spaceBtwItems / 2,
             ),
             // Details
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,25 +96,25 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Price
-                Padding(
-                  padding: const EdgeInsets.only(left: TSizes.sm),
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
                   child: TProductPriceText(
                     price: '35.0',
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: TColors.black,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(TSizes.cardRadiusMd),
                           bottomRight:
                               Radius.circular(TSizes.productImageRadius))),
-                  child: SizedBox(
+                  child: const SizedBox(
                     width: TSizes.iconLg * 1.2,
                     height: TSizes.iconLg * 1.2,
                     child: Center(

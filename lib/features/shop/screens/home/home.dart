@@ -1,5 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce_app/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:ecommerce_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widget/home_appbar.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widget/home_categories.dart';
@@ -27,22 +25,22 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   // Appbar
-                  THomeAppBar(),
-                  SizedBox(
+                  const THomeAppBar(),
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
                   // Searchbar
-                  TSearchContainer(
+                  const TSearchContainer(
                     text: "Search on Store",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
                   // Categories
                   Padding(
-                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: const EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
                         // Heading
@@ -52,14 +50,17 @@ class HomeScreen extends StatelessWidget {
                           textColor: TColors.white,
                           onPressed: () {},
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: TSizes.spaceBtwItems,
                         ),
 
                         // Categories
-                        THomeCategories()
+                        const THomeCategories()
                       ],
                     ),
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
                   ),
                 ],
               ),
@@ -69,19 +70,19 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  TPromoSlider(
+                  const TPromoSlider(
                     banners: [
                       TImages.banner3,
                       TImages.banner4,
                       TImages.banner5
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
                   TGridLayout(
                     itemCount: 10,
-                    itemBuilder: (_, index) => TProductCardVertical(),
+                    itemBuilder: (_, index) => const TProductCardVertical(),
                   ),
                 ],
               ),

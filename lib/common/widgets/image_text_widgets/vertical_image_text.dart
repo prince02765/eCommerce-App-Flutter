@@ -32,7 +32,7 @@ class TVerticalImageText extends StatelessWidget {
             Container(
               width: 56,
               height: 56,
-              padding: EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(TSizes.sm),
               decoration: BoxDecoration(
                 color: backgroundColor ?? (dark ? TColors.dark : TColors.white),
                 borderRadius: BorderRadius.circular(100),
@@ -46,7 +46,7 @@ class TVerticalImageText extends StatelessWidget {
               ),
             ),
             // Text
-            SizedBox(
+            const SizedBox(
               height: TSizes.spaceBtwItems / 2,
             ),
             SizedBox(

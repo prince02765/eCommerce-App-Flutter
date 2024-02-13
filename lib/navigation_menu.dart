@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/features/personalization/screens/settings/setting.dart';
 import 'package:ecommerce_app/features/shop/screens/home/home.dart';
 import 'package:ecommerce_app/features/shop/screens/store/store.dart';
 import 'package:ecommerce_app/features/shop/screens/wishlist/wishlist.dart';
@@ -27,7 +28,7 @@ class NavigationMenu extends StatelessWidget {
           indicatorColor: dark
               ? TColors.white.withOpacity(0.1)
               : TColors.black.withOpacity(0.1),
-          destinations: [
+          destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
             NavigationDestination(icon: Icon(Iconsax.shop), label: "Store"),
             NavigationDestination(icon: Icon(Iconsax.heart), label: "Wishlist"),
@@ -46,9 +47,7 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const StoreScreen(),
-    FavouriteScreen(),
-    Container(
-      color: Colors.blue,
-    )
+    const FavouriteScreen(),
+    const SettingScreen(),
   ];
 }

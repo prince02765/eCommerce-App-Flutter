@@ -23,18 +23,18 @@ class FavouriteScreen extends StatelessWidget {
         actions: [
           TCircularIcon(
             icon: Iconsax.add,
-            onPressed: () => Get.to(HomeScreen()),
+            onPressed: () => Get.to(const HomeScreen()),
           )
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               TGridLayout(
                   itemCount: 10,
-                  itemBuilder: (_, index) => TProductCardVertical())
+                  itemBuilder: (_, index) => const TProductCardVertical())
             ],
           ),
         ),
