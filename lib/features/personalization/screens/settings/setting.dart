@@ -4,6 +4,8 @@ import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/list_tiles/settings_menu_tile.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../shop/screens/checkout/checkout.dart';
+import '../../../shop/screens/order/oder.dart';
 import '../profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -69,13 +71,17 @@ class SettingScreen extends StatelessWidget {
                     onTap: () => Get.to(() => UserAddressScreen()),
                   ),
                   TSettingsMenuTile(
-                      icon: Iconsax.shopping_cart,
-                      title: "My Cart",
-                      subTitle: "Add, remove products and move to checkout"),
+                    icon: Iconsax.shopping_cart,
+                    title: "My Cart",
+                    subTitle: "Add, remove products and move to checkout",
+                    onTap: () => Get.to(() => CheckoutScreen()),
+                  ),
                   TSettingsMenuTile(
-                      icon: Iconsax.bag_tick,
-                      title: "My Orders",
-                      subTitle: "In-proccess and Completed Orders"),
+                    icon: Iconsax.bag_tick,
+                    title: "My Orders",
+                    subTitle: "In-proccess and Completed Orders",
+                    onTap: () => Get.to(() => OrderScreen()),
+                  ),
                   TSettingsMenuTile(
                       icon: Iconsax.bank,
                       title: "Bank Account",
