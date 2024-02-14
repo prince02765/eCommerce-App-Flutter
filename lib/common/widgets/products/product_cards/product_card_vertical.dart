@@ -109,6 +109,8 @@ class TProductCardVertical extends StatelessWidget {
                     price: '35.0',
                   ),
                 ),
+
+                // Add to Cart
                 Container(
                   decoration: const BoxDecoration(
                       color: TColors.black,
