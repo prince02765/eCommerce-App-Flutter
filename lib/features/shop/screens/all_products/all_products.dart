@@ -5,6 +5,8 @@ import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../common/widgets/products/sortable/sortable_products.dart';
+
 class AllProducts extends StatelessWidget {
   const AllProducts({super.key});
 
@@ -18,34 +20,7 @@ class AllProducts extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: Column(
-            children: [
-              // Dropdown
-              DropdownButtonFormField(
-                  decoration: InputDecoration(prefixIcon: Icon(Iconsax.sort)),
-                  items: [
-                    "Name",
-                    "Higher Price",
-                    "Lower Price",
-                    "Sale",
-                    "Newest",
-                    "Popularity"
-                  ]
-                      .map((options) => DropdownMenuItem(
-                          value: options, child: Text(options)))
-                      .toList(),
-                  onChanged: (value) {}),
-
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-
-              // Products
-              TGridLayout(
-                  itemCount: 10,
-                  itemBuilder: (_, index) => TProductCardVertical())
-            ],
-          ),
+          child: TSortableProducts(),
         ),
       ),
     );

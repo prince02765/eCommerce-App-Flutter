@@ -1,7 +1,10 @@
+import 'package:get/get.dart';
+
 import '../../../../common/widgets/appbar/TTabbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
+import '../brand/all_brands.dart';
 import 'widgets/category_tab.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -61,7 +64,7 @@ class StoreScreen extends StatelessWidget {
                         // Featured Brands
                         TSectionHeading(
                           title: "Feature Brands",
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => AllBrandScreen()),
                         ),
                         const SizedBox(
                           height: TSizes.spaceBtwItems / 1.5,
