@@ -1,3 +1,5 @@
+import 'package:ecommerce_app/features/personalization/screens/address/address.dart';
+
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/list_tiles/settings_menu_tile.dart';
@@ -61,9 +63,11 @@ class SettingScreen extends StatelessWidget {
                   ),
 
                   TSettingsMenuTile(
-                      icon: Iconsax.safe_home,
-                      title: "My Address",
-                      subTitle: "Set shopping delivery address"),
+                    icon: Iconsax.safe_home,
+                    title: "My Address",
+                    subTitle: "Set shopping delivery address",
+                    onTap: () => Get.to(() => UserAddressScreen()),
+                  ),
                   TSettingsMenuTile(
                       icon: Iconsax.shopping_cart,
                       title: "My Cart",
