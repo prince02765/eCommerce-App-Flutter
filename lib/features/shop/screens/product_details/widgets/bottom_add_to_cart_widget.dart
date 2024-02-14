@@ -28,10 +28,10 @@ class TBottomAddToCart extends StatelessWidget {
             children: [
               TCircularIcon(
                 icon: Iconsax.minus,
-                backgroundColor: TColors.darkGrey,
+                backgroundColor: dark ? TColors.white : TColors.darkGrey,
                 width: 40,
                 height: 40,
-                color: dark ? TColors.white : TColors.black,
+                color: dark ? TColors.black : TColors.black,
               ),
               SizedBox(
                 width: TSizes.spaceBtwItems,
@@ -45,10 +45,10 @@ class TBottomAddToCart extends StatelessWidget {
               ),
               TCircularIcon(
                 icon: Iconsax.add,
-                backgroundColor: TColors.black,
+                backgroundColor: dark ? TColors.white : TColors.darkGrey,
                 width: 40,
                 height: 40,
-                color: dark ? TColors.white : TColors.black,
+                color: dark ? TColors.black : TColors.black,
               ),
             ],
           ),
