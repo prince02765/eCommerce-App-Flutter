@@ -36,6 +36,8 @@ dependencies:
   firebase_storage: ^11.6.0
   connectivity_plus: ^5.0.2
 
+  # Firebase
+  firebase_core: ^2.12.0
 
 
   #--------------- ./ PACKAGES END ------------------#

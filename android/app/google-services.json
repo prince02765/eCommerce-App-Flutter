@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "157220170396",
+    "project_id": "digital-store-d7718",
+    "storage_bucket": "digital-store-d7718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157220170396:android:cb0b92a1aa8cf95ba95b59",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt3AVq5Xj4hTIhiKJbqI8AhFNuAoOtsN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
