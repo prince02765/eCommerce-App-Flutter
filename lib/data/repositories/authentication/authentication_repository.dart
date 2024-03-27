@@ -36,6 +36,17 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  // Email auth - Login
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } catch (e) {
+      throw "Something went wrong. Please try again.";
+    }
+  }
+
   // Email auth - Register
   Future<UserCredential> registerWithEmailAndPassword(
       String email, String password) async {
