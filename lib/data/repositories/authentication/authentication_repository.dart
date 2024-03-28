@@ -67,6 +67,15 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  // Email auth - Reset Password
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } catch (e) {
+      throw "Something went wrong. Please try again.";
+    }
+  }
+
   // Email auth - Logout
   Future<void> logout() async {
     try {
