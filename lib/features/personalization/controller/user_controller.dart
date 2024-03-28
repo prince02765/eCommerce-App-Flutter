@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../common/widgets/loaders/loader.dart';
 import '../../../utils/constants/image_strings.dart';
@@ -46,23 +47,27 @@ class UserController extends GetxController {
 
   Future<void> saveUserRecord(UserCredential? userCredential) async {
     try {
-      if (userCredential != null) {
-        final nameParts =
-            UserModel.nameParts(userCredential.user!.displayName ?? "");
-        final username =
-            UserModel.generateUserName(userCredential.user!.displayName ?? "");
+      await fetchUserRecord();
 
-        final user = UserModel(
-            id: userCredential.user!.uid,
-            firstName: nameParts[0],
-            lastName:
-                nameParts.length > 1 ? nameParts.sublist(1).join(" ") : "",
-            username: username,
-            email: userCredential.user!.email ?? "",
-            phoneNumber: userCredential.user!.phoneNumber ?? "",
-            profilePicture: userCredential.user!.photoURL ?? "");
+      if (user.value.id.isEmpty) {
+        if (userCredential != null) {
+          final nameParts =
+              UserModel.nameParts(userCredential.user!.displayName ?? "");
+          final username = UserModel.generateUserName(
+              userCredential.user!.displayName ?? "");
 
-        await userRepository.saveUserRecord(user);
+          final user = UserModel(
+              id: userCredential.user!.uid,
+              firstName: nameParts[0],
+              lastName:
+                  nameParts.length > 1 ? nameParts.sublist(1).join(" ") : "",
+              username: username,
+              email: userCredential.user!.email ?? "",
+              phoneNumber: userCredential.user!.phoneNumber ?? "",
+              profilePicture: userCredential.user!.photoURL ?? "");
+
+          await userRepository.saveUserRecord(user);
+        }
       }
     } catch (e) {
       TLoaders.warningSnackBar(title: "Oh Snap!", message: e.toString());
@@ -143,6 +148,30 @@ class UserController extends GetxController {
     } catch (e) {
       TFullScreenLoader.stopLoading();
       TLoaders.warningSnackBar(title: "Oh Snap!", message: e.toString());
+    }
+  }
+
+  uploadUserProfilePicture() async {
+    try {
+      final image = await ImagePicker().pickImage(
+          source: ImageSource.gallery,
+          imageQuality: 70,
+          maxHeight: 512,
+          maxWidth: 512);
+      if (image != null) {
+        final imageUrl =
+            await userRepository.uploadImage("Users/Images/Profile/", image);
+
+        Map<String, dynamic> json = {"ProfilePicture": imageUrl};
+        await userRepository.updateSingleField(json);
+
+        user.value.profilePicture = imageUrl;
+        TLoaders.successSnackBar(
+            title: "Congratulations",
+            message: "Your profile image has been updated");
+      }
+    } catch (e) {
+      TLoaders.errorSnackBar(title: "Oh Snap!", message: e.toString());
     }
   }
 }

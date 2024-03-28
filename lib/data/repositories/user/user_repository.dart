@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommerce_app/data/repositories/authentication/authentication_repository.dart';
 import 'package:ecommerce_app/data/repositories/user/user_model.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 class UserRepository extends GetxController {
   static UserRepository get instance => Get.find();
@@ -56,6 +60,18 @@ class UserRepository extends GetxController {
       await _db.collection("Users").doc(userId).delete();
     } catch (e) {
       throw "Something went wrong. Please try again";
+    }
+  }
+
+  // Upload Image
+  Future<String> uploadImage(String path, XFile image) async {
+    try {
+      final ref = FirebaseStorage.instance.ref(path).child(image.name);
+      await ref.putFile(File(image.path));
+      final url = await ref.getDownloadURL();
+      return url;
+    } catch (e) {
+      throw "Something went wrong. Please try again.";
     }
   }
 }

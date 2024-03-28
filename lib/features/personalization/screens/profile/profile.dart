@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/features/personalization/controller/user_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
@@ -29,13 +30,23 @@ class ProfileScreen extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    TCircularImage(
-                      image: TImages.user,
-                      width: 80,
-                      height: 80,
+                    Obx(
+                      () {
+                        final networkImage =
+                            controller.user.value.profilePicture;
+                        final image = networkImage.isNotEmpty
+                            ? networkImage
+                            : TImages.user;
+                        return TCircularImage(
+                          image: image,
+                          width: 80,
+                          height: 80,
+                          isNetworkImage: networkImage.isNotEmpty,
+                        );
+                      },
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () => controller.uploadUserProfilePicture(),
                         child: Text("Change Profile Picture")),
                   ],
                 ),
