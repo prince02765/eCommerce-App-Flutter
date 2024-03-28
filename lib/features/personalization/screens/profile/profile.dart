@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/features/personalization/controller/user_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -13,6 +14,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: TAppBar(
         showBackArrow: true,
@@ -57,12 +59,12 @@ class ProfileScreen extends StatelessWidget {
 
               TProfileMenu(
                 title: "Name",
-                value: "Agevole",
+                value: controller.user.value.firstName,
                 onPressed: () {},
               ),
               TProfileMenu(
                 title: "Username",
-                value: "agevole_123",
+                value: controller.user.value.username,
                 onPressed: () {},
               ),
 
@@ -85,23 +87,23 @@ class ProfileScreen extends StatelessWidget {
 
               TProfileMenu(
                 title: "User ID",
-                value: "46256",
+                value: controller.user.value.id,
                 icon: Iconsax.copy,
                 onPressed: () {},
               ),
               TProfileMenu(
                 title: "E-mail",
-                value: "user@gmail.com",
+                value: controller.user.value.email,
                 onPressed: () {},
               ),
               TProfileMenu(
                 title: "Phone Number",
-                value: "+91 99999 88888",
+                value: controller.user.value.phoneNumber,
                 onPressed: () {},
               ),
               TProfileMenu(
                 title: "Gender",
-                value: "Mal",
+                value: "Male",
                 onPressed: () {},
               ),
               TProfileMenu(
@@ -116,7 +118,7 @@ class ProfileScreen extends StatelessWidget {
 
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => controller.deleteAccountWarningPopUp(),
                   child: Text(
                     "Close Account",
                     style: TextStyle(color: Colors.red),

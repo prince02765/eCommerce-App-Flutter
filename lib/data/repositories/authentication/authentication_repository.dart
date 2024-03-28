@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/data/repositories/user/user_repository.dart';
 import 'package:ecommerce_app/features/authentication/screens/login/login.dart';
 import 'package:ecommerce_app/features/authentication/screens/onbarding/onboarding.dart';
 import 'package:ecommerce_app/features/authentication/screens/signup/verify_email.dart';
@@ -11,6 +12,8 @@ class AuthenticationRepository extends GetxController {
 
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
+
+  User? get authUser => _auth.currentUser;
 
   @override
   void onReady() {
@@ -42,6 +45,18 @@ class AuthenticationRepository extends GetxController {
     try {
       return await _auth.signInWithEmailAndPassword(
           email: email, password: password);
+    } catch (e) {
+      throw "Something went wrong. Please try again.";
+    }
+  }
+
+  // Email auth - Re-Auth
+  Future<void> reAuthEmailAndPassword(String email, String password) async {
+    try {
+      AuthCredential credential =
+          EmailAuthProvider.credential(email: email, password: password);
+
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
     } catch (e) {
       throw "Something went wrong. Please try again.";
     }
@@ -81,6 +96,16 @@ class AuthenticationRepository extends GetxController {
     try {
       await FirebaseAuth.instance.signOut();
       Get.offAll(() => LoginScreen());
+    } catch (e) {
+      throw "Something went wrong. Please try again.";
+    }
+  }
+
+  // Email auth - delete user
+  Future<void> deleteAccount() async {
+    try {
+      await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
+      await _auth.currentUser!.delete();
     } catch (e) {
       throw "Something went wrong. Please try again.";
     }
