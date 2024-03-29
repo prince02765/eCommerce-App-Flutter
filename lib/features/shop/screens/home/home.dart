@@ -77,7 +77,8 @@ class HomeScreen extends StatelessWidget {
                     banners: [
                       TImages.banner3,
                       TImages.banner4,
-                      TImages.banner5
+                      TImages.banner7,
+                      TImages.banner8,
                     ],
                   ),
                   const SizedBox(
