@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/images/t_circular_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
@@ -38,11 +39,16 @@ class TVerticalImageText extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
-                child: Image(
-                  image: AssetImage(image),
+                child: TCircularImage(
+                  image: image,
+                  isNetworkImage: true,
                   fit: BoxFit.cover,
-                  color: dark ? TColors.light : TColors.dark,
                 ),
+                // child: Image(
+                //   image: AssetImage(image),
+                //   fit: BoxFit.cover,
+                //   color: dark ? TColors.light : TColors.dark,
+                // ),
               ),
             ),
             // Text
@@ -51,14 +57,16 @@ class TVerticalImageText extends StatelessWidget {
             ),
             SizedBox(
               width: 55,
-              child: Text(
-                title,
-                style: Theme.of(context)
-                    .textTheme
-                    .labelMedium!
-                    .apply(color: textColor),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
+              child: Center(
+                child: Text(
+                  title,
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelMedium!
+                      .apply(color: textColor),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             )
           ],
