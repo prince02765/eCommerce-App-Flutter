@@ -11,8 +11,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../utils/helpers/helper_functions.dart';
 
-class TProductMetadata extends StatelessWidget {
-  const TProductMetadata({super.key});
+class TProductMetadata2 extends StatelessWidget {
+  const TProductMetadata2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class TProductMetadata extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                   horizontal: TSizes.sm, vertical: TSizes.xs),
               child: Text(
-                "25%",
+                "15%",
                 style: Theme.of(context)
                     .textTheme
                     .labelLarge!
@@ -43,7 +43,7 @@ class TProductMetadata extends StatelessWidget {
 
             // Price
             Text(
-              "\$75",
+              "\$55",
               style: Theme.of(context)
                   .textTheme
                   .titleSmall!
@@ -53,7 +53,7 @@ class TProductMetadata extends StatelessWidget {
               width: TSizes.spaceBtwItems,
             ),
             TProductPriceText(
-              price: "35",
+              price: "28",
               isLarge: true,
             )
           ],
@@ -63,7 +63,7 @@ class TProductMetadata extends StatelessWidget {
         ),
 
         // Title
-        TProductTitleText(title: "Green Nike Air Shoes"),
+        TProductTitleText(title: "White Nike Air Shoes"),
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),

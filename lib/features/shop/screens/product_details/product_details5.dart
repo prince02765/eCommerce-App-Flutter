@@ -1,7 +1,5 @@
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
-import 'package:ecommerce_app/features/shop/screens/product_details/widgets/product_attributes.dart';
-import 'package:ecommerce_app/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:ecommerce_app/features/shop/screens/product_details/widgets/rating_share_widget.dart';
 import 'package:ecommerce_app/features/shop/screens/product_review/product_reviews.dart';
 import 'package:flutter/material.dart';
@@ -11,10 +9,15 @@ import 'package:readmore/readmore.dart';
 
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
-import 'widgets/product_image_slider.dart';
+import 'widgets2/product_attributes2.dart';
+import 'widgets2/product_image_slider2.dart';
+import 'widgets2/product_meta_data2.dart';
+import 'widgets5/product_attributes5.dart';
+import 'widgets5/product_image_slider5.dart';
+import 'widgets5/product_meta_data5.dart';
 
-class ProductDetailsScreen extends StatelessWidget {
-  const ProductDetailsScreen({super.key});
+class ProductDetailsScreen5 extends StatelessWidget {
+  const ProductDetailsScreen5({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class ProductDetailsScreen extends StatelessWidget {
         child: Column(
           children: [
             // Product Image Slider
-            TProductImageSlider(),
+            TProductImageSlider5(),
 
             // Product details
             Padding(
@@ -40,10 +43,10 @@ class ProductDetailsScreen extends StatelessWidget {
                   TRatingAndShare(),
 
                   // Price, title, stock & brand
-                  TProductMetadata(),
+                  TProductMetadata5(),
 
                   // Attributes
-                  TProductAttributes(),
+                  TProductAttributes5(),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
@@ -67,7 +70,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     height: TSizes.spaceBtwItems,
                   ),
                   ReadMoreText(
-                    "Let the Nike Pegasus 39, a balanced and energized ride for any run, help you ascend to new heights. A supportive sensation helps keep your foot contained, while underfoot cushioning combines with 2 Zoom Air units to add a pop to your step as you transition from heel to toe. Your trusted workhorse with wings is back. Time to fly.",
+                    "Crafted from premium, heavyweight knit fabric, this short-sleeve top from our Nike Life collection puts an elevated spin on an everyday essential. The thick, dual-layered knit ribbing on the collar adds texture and durability.",
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: " Show More",

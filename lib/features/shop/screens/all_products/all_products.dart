@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce_app/common/widgets/layouts/grid_layout.dart';
-import 'package:ecommerce_app/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:ecommerce_app/common/widgets/products/product_cards/verticals/product_card_vertical1.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';

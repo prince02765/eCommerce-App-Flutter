@@ -19,7 +19,7 @@ class THomeCategories extends StatelessWidget {
         if (categoryController.featuredCategories.isEmpty) {
           return Center(
             child: Text(
-              "No data found",
+              "Loading...",
               style: Theme.of(context)
                   .textTheme
                   .bodyMedium!

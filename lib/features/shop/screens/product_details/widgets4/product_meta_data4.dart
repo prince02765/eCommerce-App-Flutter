@@ -11,8 +11,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../utils/helpers/helper_functions.dart';
 
-class TProductMetadata extends StatelessWidget {
-  const TProductMetadata({super.key});
+class TProductMetadata4 extends StatelessWidget {
+  const TProductMetadata4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class TProductMetadata extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                   horizontal: TSizes.sm, vertical: TSizes.xs),
               child: Text(
-                "25%",
+                "18%",
                 style: Theme.of(context)
                     .textTheme
                     .labelLarge!
@@ -43,7 +43,7 @@ class TProductMetadata extends StatelessWidget {
 
             // Price
             Text(
-              "\$75",
+              "\$34",
               style: Theme.of(context)
                   .textTheme
                   .titleSmall!
@@ -53,7 +53,7 @@ class TProductMetadata extends StatelessWidget {
               width: TSizes.spaceBtwItems,
             ),
             TProductPriceText(
-              price: "35",
+              price: "20",
               isLarge: true,
             )
           ],
@@ -63,7 +63,7 @@ class TProductMetadata extends StatelessWidget {
         ),
 
         // Title
-        TProductTitleText(title: "Green Nike Air Shoes"),
+        TProductTitleText(title: "Blue Levi's Men Jeans"),
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),
@@ -89,13 +89,13 @@ class TProductMetadata extends StatelessWidget {
         Row(
           children: [
             TCircularImage(
-              image: TImages.shoeIcon,
+              image: TImages.clothIcon,
               width: 32,
               height: 32,
               overlayColor: dark ? TColors.white : TColors.black,
             ),
             TBrandTitleWithVerificationIcon(
-              title: "Nike",
+              title: "Levi's",
               brandTextSize: TextSizes.medium,
             )
           ],

@@ -87,7 +87,7 @@ class CheckoutScreen extends StatelessWidget {
         padding: EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
             onPressed: () => Get.to(() => SuccessScreen(
-                  image: TImages.successfulPaymentIcon,
+                  image: TImages.successfulRegistationAnimation,
                   title: "Payment Success!",
                   subTitle: "Your item will be shipped soon!",
                   onPressed: () => Get.offAll(() => NavigationMenu()),

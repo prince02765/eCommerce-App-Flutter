@@ -11,8 +11,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../utils/helpers/helper_functions.dart';
 
-class TProductMetadata extends StatelessWidget {
-  const TProductMetadata({super.key});
+class TProductMetadata5 extends StatelessWidget {
+  const TProductMetadata5({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class TProductMetadata extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                   horizontal: TSizes.sm, vertical: TSizes.xs),
               child: Text(
-                "25%",
+                "6%",
                 style: Theme.of(context)
                     .textTheme
                     .labelLarge!
@@ -43,7 +43,7 @@ class TProductMetadata extends StatelessWidget {
 
             // Price
             Text(
-              "\$75",
+              "\$26",
               style: Theme.of(context)
                   .textTheme
                   .titleSmall!
@@ -53,7 +53,7 @@ class TProductMetadata extends StatelessWidget {
               width: TSizes.spaceBtwItems,
             ),
             TProductPriceText(
-              price: "35",
+              price: "14",
               isLarge: true,
             )
           ],
@@ -63,7 +63,7 @@ class TProductMetadata extends StatelessWidget {
         ),
 
         // Title
-        TProductTitleText(title: "Green Nike Air Shoes"),
+        TProductTitleText(title: "Navy Blue Nike Tshirt"),
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),
@@ -89,7 +89,7 @@ class TProductMetadata extends StatelessWidget {
         Row(
           children: [
             TCircularImage(
-              image: TImages.shoeIcon,
+              image: TImages.clothIcon,
               width: 32,
               height: 32,
               overlayColor: dark ? TColors.white : TColors.black,

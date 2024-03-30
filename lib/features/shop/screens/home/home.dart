@@ -1,6 +1,11 @@
 import 'package:get/get.dart';
 
-import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical1.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical2.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical3.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical4.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical5.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical6.dart';
 import '../all_products/all_products.dart';
 import 'widget/home_appbar.dart';
 import 'widget/home_categories.dart';
@@ -82,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: TSizes.spaceBtwItems,
                   ),
                   TSectionHeading(
                     title: "Popular Products",
@@ -92,8 +97,29 @@ class HomeScreen extends StatelessWidget {
                     height: TSizes.spaceBtwItems,
                   ),
                   TGridLayout(
-                    itemCount: 10,
+                    itemCount: 2,
                     itemBuilder: (_, index) => const TProductCardVertical(),
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+                  TGridLayout(
+                    itemCount: 2,
+                    itemBuilder: (_, index) => const TProductCardVertical3(),
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+                  TGridLayout(
+                    itemCount: 2,
+                    itemBuilder: (_, index) => const TProductCardVertical4(),
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+                  TGridLayout(
+                    itemCount: 2,
+                    itemBuilder: (_, index) => const TProductCardVertical6(),
                   ),
                 ],
               ),

@@ -10,8 +10,8 @@ import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
-class TProductImageSlider extends StatelessWidget {
-  const TProductImageSlider({
+class TProductImageSlider6 extends StatelessWidget {
+  const TProductImageSlider6({
     super.key,
   });
 
@@ -31,7 +31,7 @@ class TProductImageSlider extends StatelessWidget {
                 padding: EdgeInsets.all(TSizes.productImageRadius * 2),
                 child: Center(
                     child: Image(
-                  image: AssetImage(TImages.productImage1),
+                  image: AssetImage(TImages.productImage6),
                 )),
               ),
             ),
@@ -53,7 +53,7 @@ class TProductImageSlider extends StatelessWidget {
                       backgroundColor: dark ? TColors.black : TColors.white,
                       border: Border.all(color: TColors.primary),
                       padding: EdgeInsets.all(TSizes.sm),
-                      imageUrl: TImages.productImage1),
+                      imageUrl: TImages.productImage6),
                   separatorBuilder: (_, __) => SizedBox(
                     width: TSizes.spaceBtwItems,
                   ),
@@ -67,7 +67,7 @@ class TProductImageSlider extends StatelessWidget {
               actions: [
                 TCircularIcon(
                   icon: Iconsax.heart5,
-                  color: Colors.grey,
+                  color: Colors.red,
                 )
               ],
             )

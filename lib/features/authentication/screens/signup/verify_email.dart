@@ -1,8 +1,6 @@
 import 'package:ecommerce_app/data/repositories/authentication/authentication_repository.dart';
 import 'package:ecommerce_app/features/authentication/controller/signup/verify_email_controller.dart';
 
-import '../../../../common/widgets/success_screen/success_screen.dart';
-import '../login/login.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/text_strings.dart';
 import '../../../../utils/helpers/helper_functions.dart';

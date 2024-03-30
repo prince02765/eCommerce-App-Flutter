@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import '../../../../../common/widgets/chips/choice_chip.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
-class TProductAttributes extends StatelessWidget {
-  const TProductAttributes({super.key});
+class TProductAttributes5 extends StatelessWidget {
+  const TProductAttributes5({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class TProductAttributes extends StatelessWidget {
                           ),
                           // Actual Price
                           Text(
-                            "\$75",
+                            "\$26",
                             style: Theme.of(context)
                                 .textTheme
                                 .titleSmall!
@@ -55,7 +55,7 @@ class TProductAttributes extends StatelessWidget {
                           ),
 
                           // Sale Price
-                          TProductPriceText(price: "35"),
+                          TProductPriceText(price: "14"),
                         ],
                       ),
 
@@ -80,7 +80,7 @@ class TProductAttributes extends StatelessWidget {
               // Variation Description
               TProductTitleText(
                 title:
-                    "Let the Nike Pegasus 39, a balanced and energized ride for any run, help you ascend to new heights.",
+                    "Crafted from premium, heavyweight knit fabric, this short-sleeve top from our Nike.",
                 smallSize: true,
                 maxLines: 4,
               ),
@@ -106,17 +106,17 @@ class TProductAttributes extends StatelessWidget {
               spacing: 8,
               children: [
                 TChoiceChip(
-                  text: "Green",
+                  text: "Blue",
                   selected: true,
                   onSelected: (value) {},
                 ),
                 TChoiceChip(
-                  text: "Blue",
+                  text: "Black",
                   selected: false,
                   onSelected: (value) {},
                 ),
                 TChoiceChip(
-                  text: "Yellow",
+                  text: "White",
                   selected: false,
                   onSelected: (value) {},
                 ),
@@ -138,20 +138,25 @@ class TProductAttributes extends StatelessWidget {
               spacing: 8,
               children: [
                 TChoiceChip(
-                  text: "EU 34",
+                  text: "S",
+                  selected: false,
+                  onSelected: (value) {},
+                ),
+                TChoiceChip(
+                  text: "M",
                   selected: true,
                   onSelected: (value) {},
                 ),
                 TChoiceChip(
-                  text: "EU 36",
+                  text: "L",
                   selected: false,
                   onSelected: (value) {},
                 ),
                 TChoiceChip(
-                  text: "EU 38",
+                  text: "XL",
                   selected: false,
                   onSelected: (value) {},
-                ),
+                )
               ],
             )
           ],

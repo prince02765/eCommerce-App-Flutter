@@ -2,11 +2,14 @@ import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../personalization/controller/user_controller.dart';
+
 class TBillingAddressSection extends StatelessWidget {
   const TBillingAddressSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -16,7 +19,7 @@ class TBillingAddressSection extends StatelessWidget {
           onPressed: () {},
         ),
         Text(
-          "Agevole",
+          controller.user.value.fullName,
           style: Theme.of(context).textTheme.bodyLarge,
         ),
         SizedBox(
@@ -32,7 +35,7 @@ class TBillingAddressSection extends StatelessWidget {
             SizedBox(
               width: TSizes.spaceBtwItems,
             ),
-            Text("+91 99999 88888",
+            Text(controller.user.value.phoneNumber,
                 style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),

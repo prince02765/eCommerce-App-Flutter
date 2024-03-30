@@ -12,9 +12,12 @@ import 'package:readmore/readmore.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 import 'widgets/product_image_slider.dart';
+import 'widgets2/product_attributes2.dart';
+import 'widgets2/product_image_slider2.dart';
+import 'widgets2/product_meta_data2.dart';
 
-class ProductDetailsScreen extends StatelessWidget {
-  const ProductDetailsScreen({super.key});
+class ProductDetailsScreen2 extends StatelessWidget {
+  const ProductDetailsScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class ProductDetailsScreen extends StatelessWidget {
         child: Column(
           children: [
             // Product Image Slider
-            TProductImageSlider(),
+            TProductImageSlider2(),
 
             // Product details
             Padding(
@@ -40,10 +43,10 @@ class ProductDetailsScreen extends StatelessWidget {
                   TRatingAndShare(),
 
                   // Price, title, stock & brand
-                  TProductMetadata(),
+                  TProductMetadata2(),
 
                   // Attributes
-                  TProductAttributes(),
+                  TProductAttributes2(),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
@@ -67,7 +70,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     height: TSizes.spaceBtwItems,
                   ),
                   ReadMoreText(
-                    "Let the Nike Pegasus 39, a balanced and energized ride for any run, help you ascend to new heights. A supportive sensation helps keep your foot contained, while underfoot cushioning combines with 2 Zoom Air units to add a pop to your step as you transition from heel to toe. Your trusted workhorse with wings is back. Time to fly.",
+                    "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colours and crisp leather give it a distinct identity.",
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: " Show More",

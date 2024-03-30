@@ -1,6 +1,8 @@
 import '../../../../common/widgets/icons/circular_icon.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
-import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical1.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical2.dart';
+import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical6.dart';
 import '../home/home.dart';
 import '../../../../utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -33,8 +35,15 @@ class FavouriteScreen extends StatelessWidget {
           child: Column(
             children: [
               TGridLayout(
-                  itemCount: 10,
-                  itemBuilder: (_, index) => const TProductCardVertical())
+                  itemCount: 2,
+                  itemBuilder: (_, index) => const TProductCardVertical2()),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
+              TGridLayout(
+                itemCount: 2,
+                itemBuilder: (_, index) => const TProductCardVertical6(),
+              ),
             ],
           ),
         ),
