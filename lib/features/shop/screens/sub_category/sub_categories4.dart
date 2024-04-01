@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/products/product_cards/horizontals/product_card_horizontal.dart';
 
-class SubCategoriesScreen extends StatelessWidget {
-  const SubCategoriesScreen({super.key});
+class SubCategoriesScreen4 extends StatelessWidget {
+  const SubCategoriesScreen4({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TAppBar(
-        title: Text("Sports"),
+        title: Text("Cloths"),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -25,7 +25,7 @@ class SubCategoriesScreen extends StatelessWidget {
               // Banner
               TRoundedImage(
                 width: double.infinity,
-                imageUrl: TImages.banner6,
+                imageUrl: TImages.promoBanner2,
                 applyImageRadius: true,
               ),
               SizedBox(
@@ -53,12 +53,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage1,
-                        sale: "25%",
-                        color: Colors.red,
-                        title: "Green Nike Air shoes",
-                        brand: "Nike",
-                        price: "35.0",
+                        image: TImages.productImage64,
+                        sale: "12%",
+                        color: Colors.grey,
+                        title: "Leather Jacket",
+                        brand: "Karl Lagerfeld",
+                        price: "90.0",
                       ),
                     ),
                   )
@@ -87,12 +87,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage2,
-                        sale: "15%",
-                        color: Colors.grey,
-                        title: "White Nike Air shoes",
+                        image: TImages.productImage3,
+                        sale: "24%",
+                        color: Colors.red,
+                        title: "Nike Jacket",
                         brand: "Nike",
-                        price: "28.0",
+                        price: "140.0",
                       ),
                     ),
                   )
@@ -121,12 +121,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage25,
-                        sale: "10%",
+                        image: TImages.productImage60,
+                        sale: "16%",
                         color: Colors.grey,
-                        title: "Nike Tracksuit Blue",
-                        brand: "Nike",
-                        price: "42.0",
+                        title: "Slim Fit Brand Print Polo",
+                        brand: "U.S. POLO",
+                        price: "46.0",
                       ),
                     ),
                   )
@@ -155,12 +155,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage28,
-                        sale: "12%",
+                        image: TImages.productImage4,
+                        sale: "28%",
                         color: Colors.red,
-                        title: "Adidas Football",
-                        brand: "Adidas",
-                        price: "52.0",
+                        title: "MEN'S 511 BLUE SLIM FIT JEANS",
+                        brand: "Levi'S",
+                        price: "180.0",
                       ),
                     ),
                   )

@@ -1,4 +1,8 @@
+import 'package:ecommerce_app/features/authentication/screens/login/login.dart';
 import 'package:ecommerce_app/features/personalization/screens/address/address.dart';
+import 'package:ecommerce_app/features/shop/screens/coupones/coupones.dart';
+import 'package:ecommerce_app/features/shop/screens/notification/notification.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -6,6 +10,7 @@ import '../../../../common/widgets/list_tiles/settings_menu_tile.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../shop/screens/checkout/checkout.dart';
 import '../../../shop/screens/order/oder.dart';
+import '../../../shop/screens/privacy/privacy.dart';
 import '../profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -82,22 +87,28 @@ class SettingScreen extends StatelessWidget {
                     subTitle: "In-proccess and Completed Orders",
                     onTap: () => Get.to(() => OrderScreen()),
                   ),
+                  // TSettingsMenuTile(
+                  //     icon: Iconsax.bank,
+                  //     title: "Bank Account",
+                  //     subTitle: "Withdrow balance to registered bank account"),
                   TSettingsMenuTile(
-                      icon: Iconsax.bank,
-                      title: "Bank Account",
-                      subTitle: "Withdrow balance to registered bank account"),
+                    icon: Iconsax.discount_shape,
+                    title: "My Coupons",
+                    subTitle: "List of all the discounted coupons",
+                    onTap: () => Get.to(() => CouponesScreen()),
+                  ),
                   TSettingsMenuTile(
-                      icon: Iconsax.discount_shape,
-                      title: "My Coupons",
-                      subTitle: "List of all the discounted coupons"),
+                    icon: Iconsax.notification,
+                    title: "Notification",
+                    subTitle: "Set any kind of notification message",
+                    onTap: () => Get.to(() => NotificationScreen()),
+                  ),
                   TSettingsMenuTile(
-                      icon: Iconsax.notification,
-                      title: "Notification",
-                      subTitle: "Set any kind of notification message"),
-                  TSettingsMenuTile(
-                      icon: Iconsax.security_card,
-                      title: "Acount Privacy",
-                      subTitle: "Manage data usage and conected accouts"),
+                    icon: Iconsax.security_card,
+                    title: "Acount Privacy",
+                    subTitle: "Manage data usage and conected accouts",
+                    onTap: () => Get.to(() => PrivacyPolicyScreen()),
+                  ),
 
                   // App Settings
                   SizedBox(
@@ -110,10 +121,6 @@ class SettingScreen extends StatelessWidget {
                   SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  TSettingsMenuTile(
-                      icon: Iconsax.document_upload,
-                      title: "Load Data",
-                      subTitle: "Upload Data to your Cloud Firebase"),
                   TSettingsMenuTile(
                     icon: Iconsax.location,
                     title: "Geolocation",
@@ -139,8 +146,11 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     width: double.infinity,
-                    child:
-                        OutlinedButton(onPressed: () {}, child: Text("Logout")),
+                    child: OutlinedButton(
+                        onPressed: () async {
+                          _showLogoutDialog(context);
+                        },
+                        child: Text("Logout")),
                   ),
                   SizedBox(
                     height: TSizes.spaceBtwSections * 2,
@@ -151,6 +161,33 @@ class SettingScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void _showLogoutDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Logout'),
+          content: Text('Are you sure you want to logout?'),
+          actions: <Widget>[
+            OutlinedButton(
+              onPressed: () async {
+                await FirebaseAuth.instance.signOut();
+                Get.offAll(LoginScreen());
+              },
+              child: Text('Yes'),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: Text('No'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

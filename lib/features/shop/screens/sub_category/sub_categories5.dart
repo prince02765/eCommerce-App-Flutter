@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/products/product_cards/horizontals/product_card_horizontal.dart';
 
-class SubCategoriesScreen extends StatelessWidget {
-  const SubCategoriesScreen({super.key});
+class SubCategoriesScreen5 extends StatelessWidget {
+  const SubCategoriesScreen5({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TAppBar(
-        title: Text("Sports"),
+        title: Text("Toys"),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -25,7 +25,7 @@ class SubCategoriesScreen extends StatelessWidget {
               // Banner
               TRoundedImage(
                 width: double.infinity,
-                imageUrl: TImages.banner6,
+                imageUrl: TImages.banner2,
                 applyImageRadius: true,
               ),
               SizedBox(
@@ -53,12 +53,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage1,
-                        sale: "25%",
+                        image: TImages.productImage28,
+                        sale: "12%",
                         color: Colors.red,
-                        title: "Green Nike Air shoes",
-                        brand: "Nike",
-                        price: "35.0",
+                        title: "Adidas Football",
+                        brand: "Adidas",
+                        price: "52.0",
                       ),
                     ),
                   )
@@ -87,12 +87,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage2,
-                        sale: "15%",
+                        image: TImages.productImage29,
+                        sale: "24%",
                         color: Colors.grey,
-                        title: "White Nike Air shoes",
-                        brand: "Nike",
-                        price: "28.0",
+                        title: "Baseball Bat",
+                        brand: "DeMarini",
+                        price: "180.0",
                       ),
                     ),
                   )
@@ -121,12 +121,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage25,
-                        sale: "10%",
-                        color: Colors.grey,
-                        title: "Nike Tracksuit Blue",
-                        brand: "Nike",
-                        price: "42.0",
+                        image: TImages.productImage30,
+                        sale: "24%",
+                        color: Colors.red,
+                        title: "MRF Virat Kohli Genius King Cricket Bat",
+                        brand: "MRF",
+                        price: "260.0",
                       ),
                     ),
                   )
@@ -155,12 +155,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage28,
-                        sale: "12%",
-                        color: Colors.red,
-                        title: "Adidas Football",
-                        brand: "Adidas",
-                        price: "52.0",
+                        image: TImages.productImage31,
+                        sale: "16%",
+                        color: Colors.grey,
+                        title: "WILSON PRO STAFF NOIR 97 V14",
+                        brand: "WILSON",
+                        price: "80.0",
                       ),
                     ),
                   )

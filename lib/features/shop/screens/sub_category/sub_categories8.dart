@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/products/product_cards/horizontals/product_card_horizontal.dart';
 
-class SubCategoriesScreen extends StatelessWidget {
-  const SubCategoriesScreen({super.key});
+class SubCategoriesScreen8 extends StatelessWidget {
+  const SubCategoriesScreen8({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -87,12 +87,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage2,
-                        sale: "15%",
-                        color: Colors.grey,
-                        title: "White Nike Air shoes",
+                        image: TImages.productImage1,
+                        sale: "25%",
+                        color: Colors.red,
+                        title: "Green Nike Air shoes",
                         brand: "Nike",
-                        price: "28.0",
+                        price: "35.0",
                       ),
                     ),
                   )
@@ -121,12 +121,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage25,
-                        sale: "10%",
-                        color: Colors.grey,
-                        title: "Nike Tracksuit Blue",
+                        image: TImages.productImage1,
+                        sale: "25%",
+                        color: Colors.red,
+                        title: "Green Nike Air shoes",
                         brand: "Nike",
-                        price: "42.0",
+                        price: "35.0",
                       ),
                     ),
                   )
@@ -155,12 +155,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage28,
-                        sale: "12%",
+                        image: TImages.productImage1,
+                        sale: "25%",
                         color: Colors.red,
-                        title: "Adidas Football",
-                        brand: "Adidas",
-                        price: "52.0",
+                        title: "Green Nike Air shoes",
+                        brand: "Nike",
+                        price: "35.0",
                       ),
                     ),
                   )

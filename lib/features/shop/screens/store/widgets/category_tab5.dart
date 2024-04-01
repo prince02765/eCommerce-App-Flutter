@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/brand/brand_show_case5.dart';
 import 'package:ecommerce_app/features/shop/models/category_model.dart';
 
 import '../../../../../common/widgets/layouts/grid_layout.dart';
@@ -10,8 +11,8 @@ import '../../../../../common/widgets/brand/brand_show_case.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
-class TCategoryTab extends StatelessWidget {
-  const TCategoryTab({super.key});
+class TCategoryTab5 extends StatelessWidget {
+  const TCategoryTab5({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,11 @@ class TCategoryTab extends StatelessWidget {
           child: Column(
             children: [
               // Brands
-              const TBrandShowcase(
+              const TBrandShowcase5(
                 images: [
-                  TImages.productImage3,
-                  TImages.productImage2,
-                  TImages.productImage1
+                  TImages.productImage31,
+                  TImages.productImage30,
+                  TImages.productImage29
                 ],
               ),
               const SizedBox(
@@ -56,75 +57,75 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage1,
-                    sale: "25%",
-                    color: Colors.red,
-                    title: "Green Nike Air shoes",
-                    brand: "Nike",
-                    price: "35.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage2,
-                    sale: "15%",
-                    color: Colors.grey,
-                    title: "White Nike Air shoes",
-                    brand: "Nike",
-                    price: "28.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage25,
-                    sale: "10%",
-                    color: Colors.grey,
-                    title: "Nike Tracksuit Blue",
-                    brand: "Nike",
-                    price: "42.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
                     image: TImages.productImage28,
                     sale: "12%",
                     color: Colors.red,
                     title: "Adidas Football",
                     brand: "Adidas",
                     price: "52.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage29,
+                    sale: "24%",
+                    color: Colors.grey,
+                    title: "Baseball Bat",
+                    brand: "DeMarini",
+                    price: "180.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage30,
+                    sale: "24%",
+                    color: Colors.red,
+                    title: "MRF Virat Kohli Genius King Cricket Bat",
+                    brand: "MRF",
+                    price: "260.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage31,
+                    sale: "16%",
+                    color: Colors.grey,
+                    title: "WILSON PRO STAFF NOIR 97 V14",
+                    brand: "WILSON",
+                    price: "80.0",
                   ),
                 ),
               )

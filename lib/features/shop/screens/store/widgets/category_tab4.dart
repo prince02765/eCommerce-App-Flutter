@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/brand/brand_show_case4.dart';
 import 'package:ecommerce_app/features/shop/models/category_model.dart';
 
 import '../../../../../common/widgets/layouts/grid_layout.dart';
@@ -10,8 +11,8 @@ import '../../../../../common/widgets/brand/brand_show_case.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
-class TCategoryTab extends StatelessWidget {
-  const TCategoryTab({super.key});
+class TCategoryTab4 extends StatelessWidget {
+  const TCategoryTab4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,11 @@ class TCategoryTab extends StatelessWidget {
           child: Column(
             children: [
               // Brands
-              const TBrandShowcase(
+              const TBrandShowcase4(
                 images: [
-                  TImages.productImage3,
-                  TImages.productImage2,
-                  TImages.productImage1
+                  TImages.productImage4,
+                  TImages.productImage60,
+                  TImages.productImage24
                 ],
               ),
               const SizedBox(
@@ -56,75 +57,75 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage1,
-                    sale: "25%",
-                    color: Colors.red,
-                    title: "Green Nike Air shoes",
-                    brand: "Nike",
-                    price: "35.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage2,
-                    sale: "15%",
-                    color: Colors.grey,
-                    title: "White Nike Air shoes",
-                    brand: "Nike",
-                    price: "28.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage25,
-                    sale: "10%",
-                    color: Colors.grey,
-                    title: "Nike Tracksuit Blue",
-                    brand: "Nike",
-                    price: "42.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage28,
+                    image: TImages.productImage64,
                     sale: "12%",
+                    color: Colors.grey,
+                    title: "Leather Jacket",
+                    brand: "Karl Lagerfeld",
+                    price: "90.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage3,
+                    sale: "24%",
                     color: Colors.red,
-                    title: "Adidas Football",
-                    brand: "Adidas",
-                    price: "52.0",
+                    title: "Nike Jacket",
+                    brand: "Nike",
+                    price: "140.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage60,
+                    sale: "16%",
+                    color: Colors.grey,
+                    title: "Slim Fit Brand Print Polo",
+                    brand: "U.S. POLO",
+                    price: "46.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage4,
+                    sale: "28%",
+                    color: Colors.red,
+                    title: "MEN'S 511 BLUE SLIM FIT JEANS",
+                    brand: "Levi'S",
+                    price: "180.0",
                   ),
                 ),
               )

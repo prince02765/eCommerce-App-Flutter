@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/products/product_cards/horizontals/product_card_horizontal.dart';
 
-class SubCategoriesScreen extends StatelessWidget {
-  const SubCategoriesScreen({super.key});
+class SubCategoriesScreen2 extends StatelessWidget {
+  const SubCategoriesScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TAppBar(
-        title: Text("Sports"),
+        title: Text("Furniture"),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -25,7 +25,7 @@ class SubCategoriesScreen extends StatelessWidget {
               // Banner
               TRoundedImage(
                 width: double.infinity,
-                imageUrl: TImages.banner6,
+                imageUrl: TImages.banner2,
                 applyImageRadius: true,
               ),
               SizedBox(
@@ -53,12 +53,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage1,
-                        sale: "25%",
-                        color: Colors.red,
-                        title: "Green Nike Air shoes",
-                        brand: "Nike",
-                        price: "35.0",
+                        image: TImages.productImage37,
+                        sale: "18%",
+                        color: Colors.grey,
+                        title: "Kitchen Dining Table",
+                        brand: "WoodRylen",
+                        price: "145.0",
                       ),
                     ),
                   )
@@ -87,12 +87,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage2,
-                        sale: "15%",
-                        color: Colors.grey,
-                        title: "White Nike Air shoes",
-                        brand: "Nike",
-                        price: "28.0",
+                        image: TImages.productImage41,
+                        sale: "14%",
+                        color: Colors.red,
+                        title: "Office Desk",
+                        brand: "EUREKA",
+                        price: "256.0",
                       ),
                     ),
                   )
@@ -121,12 +121,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage25,
-                        sale: "10%",
+                        image: TImages.productImage35,
+                        sale: "28%",
                         color: Colors.grey,
-                        title: "Nike Tracksuit Blue",
-                        brand: "Nike",
-                        price: "42.0",
+                        title: "Bedroom Wardrobe",
+                        brand: "Godrej",
+                        price: "180.0",
                       ),
                     ),
                   )
@@ -155,12 +155,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage28,
-                        sale: "12%",
+                        image: TImages.productImage33,
+                        sale: "28%",
                         color: Colors.red,
-                        title: "Adidas Football",
-                        brand: "Adidas",
-                        price: "52.0",
+                        title: "Bedroom Lamp",
+                        brand: "Kapoor",
+                        price: "48.0",
                       ),
                     ),
                   )

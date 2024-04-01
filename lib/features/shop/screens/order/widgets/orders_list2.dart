@@ -6,8 +6,8 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/helpers/helper_functions.dart';
 
-class TOrdersListItems extends StatelessWidget {
-  const TOrdersListItems({super.key});
+class TOrdersListItems2 extends StatelessWidget {
+  const TOrdersListItems2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +42,14 @@ class TOrdersListItems extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Pending",
+                        "Processing",
                         style: Theme.of(context)
                             .textTheme
                             .bodyLarge!
                             .apply(color: TColors.primary, fontWeightDelta: 1),
                       ),
                       Text(
-                        "07 Jun 2024",
+                        "08 March 2024",
                         style: Theme.of(context).textTheme.headlineSmall,
                       )
                     ],
@@ -90,7 +90,7 @@ class TOrdersListItems extends StatelessWidget {
                                 style:
                                     Theme.of(context).textTheme.labelMedium!),
                             Text(
-                              "[#256f2]",
+                              "[#255f2]",
                               style: Theme.of(context).textTheme.titleMedium,
                             )
                           ],
@@ -118,7 +118,7 @@ class TOrdersListItems extends StatelessWidget {
                                 style:
                                     Theme.of(context).textTheme.labelMedium!),
                             Text(
-                              "12 Jun 2024",
+                              "14 March 2024",
                               style: Theme.of(context).textTheme.titleMedium,
                             )
                           ],

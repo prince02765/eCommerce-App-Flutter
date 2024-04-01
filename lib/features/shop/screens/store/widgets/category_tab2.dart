@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/brand/brand_show_case2.dart';
 import 'package:ecommerce_app/features/shop/models/category_model.dart';
 
 import '../../../../../common/widgets/layouts/grid_layout.dart';
@@ -10,8 +11,8 @@ import '../../../../../common/widgets/brand/brand_show_case.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
-class TCategoryTab extends StatelessWidget {
-  const TCategoryTab({super.key});
+class TCategoryTab2 extends StatelessWidget {
+  const TCategoryTab2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,11 @@ class TCategoryTab extends StatelessWidget {
           child: Column(
             children: [
               // Brands
-              const TBrandShowcase(
+              const TBrandShowcase2(
                 images: [
-                  TImages.productImage3,
-                  TImages.productImage2,
-                  TImages.productImage1
+                  TImages.productImage34,
+                  TImages.productImage39,
+                  TImages.productImage43
                 ],
               ),
               const SizedBox(
@@ -56,33 +57,12 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage1,
-                    sale: "25%",
-                    color: Colors.red,
-                    title: "Green Nike Air shoes",
-                    brand: "Nike",
-                    price: "35.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage2,
-                    sale: "15%",
+                    image: TImages.productImage37,
+                    sale: "18%",
                     color: Colors.grey,
-                    title: "White Nike Air shoes",
-                    brand: "Nike",
-                    price: "28.0",
+                    title: "Kitchen Dining Table",
+                    brand: "WoodRylen",
+                    price: "145.0",
                   ),
                 ),
               ),
@@ -98,33 +78,54 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage25,
-                    sale: "10%",
-                    color: Colors.grey,
-                    title: "Nike Tracksuit Blue",
-                    brand: "Nike",
-                    price: "42.0",
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: TSizes.spaceBtwSections,
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(
-                    width: TSizes.spaceBtwItems,
-                  ),
-                  itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage28,
-                    sale: "12%",
+                    image: TImages.productImage41,
+                    sale: "14%",
                     color: Colors.red,
-                    title: "Adidas Football",
-                    brand: "Adidas",
-                    price: "52.0",
+                    title: "Office Desk",
+                    brand: "EUREKA",
+                    price: "256.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage35,
+                    sale: "28%",
+                    color: Colors.grey,
+                    title: "Bedroom Wardrobe",
+                    brand: "Godrej",
+                    price: "180.0",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: TSizes.spaceBtwItems,
+                  ),
+                  itemBuilder: (context, index) => TProductCardHorizontal(
+                    image: TImages.productImage33,
+                    sale: "28%",
+                    color: Colors.red,
+                    title: "Bedroom Lamp",
+                    brand: "Kapoor",
+                    price: "48.0",
                   ),
                 ),
               )

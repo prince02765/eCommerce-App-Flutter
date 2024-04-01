@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical1.dart';
 import '../../../../common/widgets/products/product_cards/verticals/product_card_vertical2.dart';
@@ -39,8 +40,27 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   // Searchbar
-                  const TSearchContainer(
-                    text: "Search on Store",
+                  // const TSearchContainer(
+                  //   text: "Search on Store",
+                  // ),
+                  // const SizedBox(
+                  //   height: TSizes.spaceBtwSections,
+                  // ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        top: 0.0, left: 12.0, right: 12.0, bottom: 2.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Search on Store',
+                        hintStyle: TextStyle(color: Colors.grey),
+                        filled: true,
+                        fillColor: TColors.light,
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Iconsax.search_normal,
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,

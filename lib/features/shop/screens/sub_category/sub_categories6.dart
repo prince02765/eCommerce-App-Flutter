@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/products/product_cards/horizontals/product_card_horizontal.dart';
 
-class SubCategoriesScreen extends StatelessWidget {
-  const SubCategoriesScreen({super.key});
+class SubCategoriesScreen6 extends StatelessWidget {
+  const SubCategoriesScreen6({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TAppBar(
-        title: Text("Sports"),
+        title: Text("Shoes"),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -25,7 +25,7 @@ class SubCategoriesScreen extends StatelessWidget {
               // Banner
               TRoundedImage(
                 width: double.infinity,
-                imageUrl: TImages.banner6,
+                imageUrl: TImages.promoBanner1,
                 applyImageRadius: true,
               ),
               SizedBox(
@@ -38,6 +38,40 @@ class SubCategoriesScreen extends StatelessWidget {
                   // Heading
                   TSectionHeading(
                     title: "Popularity",
+                    onPressed: () {},
+                  ),
+                  SizedBox(
+                    height: TSizes.spaceBtwItems / 2,
+                  ),
+
+                  SizedBox(
+                    height: 120,
+                    child: ListView.separated(
+                      itemCount: 4,
+                      scrollDirection: Axis.horizontal,
+                      separatorBuilder: (context, index) => SizedBox(
+                        width: TSizes.spaceBtwItems,
+                      ),
+                      itemBuilder: (context, index) => TProductCardHorizontal(
+                        image: TImages.productImage19,
+                        sale: "28%",
+                        color: Colors.grey,
+                        title: "Nike Air Jordon Single Blue",
+                        brand: "Nike",
+                        price: "48.0",
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
+              Column(
+                children: [
+                  // Heading
+                  TSectionHeading(
+                    title: "Newest First",
                     onPressed: () {},
                   ),
                   SizedBox(
@@ -71,40 +105,6 @@ class SubCategoriesScreen extends StatelessWidget {
                 children: [
                   // Heading
                   TSectionHeading(
-                    title: "Newest First",
-                    onPressed: () {},
-                  ),
-                  SizedBox(
-                    height: TSizes.spaceBtwItems / 2,
-                  ),
-
-                  SizedBox(
-                    height: 120,
-                    child: ListView.separated(
-                      itemCount: 4,
-                      scrollDirection: Axis.horizontal,
-                      separatorBuilder: (context, index) => SizedBox(
-                        width: TSizes.spaceBtwItems,
-                      ),
-                      itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage2,
-                        sale: "15%",
-                        color: Colors.grey,
-                        title: "White Nike Air shoes",
-                        brand: "Nike",
-                        price: "28.0",
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: TSizes.spaceBtwItems,
-              ),
-              Column(
-                children: [
-                  // Heading
-                  TSectionHeading(
                     title: "Relevance",
                     onPressed: () {},
                   ),
@@ -121,12 +121,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage25,
-                        sale: "10%",
-                        color: Colors.grey,
-                        title: "Nike Tracksuit Blue",
+                        image: TImages.productImage22,
+                        sale: "32%",
+                        color: Colors.red,
+                        title: "Nike Basketball Shoe Green Black",
                         brand: "Nike",
-                        price: "42.0",
+                        price: "54.0",
                       ),
                     ),
                   )
@@ -155,12 +155,12 @@ class SubCategoriesScreen extends StatelessWidget {
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (context, index) => TProductCardHorizontal(
-                        image: TImages.productImage28,
-                        sale: "12%",
-                        color: Colors.red,
-                        title: "Adidas Football",
-                        brand: "Adidas",
-                        price: "52.0",
+                        image: TImages.productImage2,
+                        sale: "15%",
+                        color: Colors.grey,
+                        title: "White Nike Air shoes",
+                        brand: "Nike",
+                        price: "28.0",
                       ),
                     ),
                   )

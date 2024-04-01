@@ -9,8 +9,8 @@ import '../custom_shapes/containers/rounded_container.dart';
 import '../images/t_circular_image.dart';
 import '../texts/t_brand_title_with_verification_icon.dart';
 
-class TBrandCard extends StatelessWidget {
-  const TBrandCard({
+class TBrandCard3 extends StatelessWidget {
+  const TBrandCard3({
     super.key,
     required this.showBorder,
     this.onTap,
@@ -36,7 +36,7 @@ class TBrandCard extends StatelessWidget {
             Flexible(
               child: TCircularImage(
                 isNetworkImage: false,
-                image: TImages.nikeLogo,
+                image: TImages.kenwoodLogo,
                 backgroundColor: Colors.transparent,
                 overlayColor: dark ? TColors.white : TColors.black,
               ),
@@ -52,11 +52,11 @@ class TBrandCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const TBrandTitleWithVerificationIcon(
-                    title: "Nike",
+                    title: "KENWOOD",
                     brandTextSize: TextSizes.large,
                   ),
                   Text(
-                    "256 Products",
+                    "146 Products",
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.labelMedium,
                   )

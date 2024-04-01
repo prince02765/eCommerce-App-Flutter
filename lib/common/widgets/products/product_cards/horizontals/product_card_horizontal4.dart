@@ -11,10 +11,10 @@ import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../utils/helpers/helper_functions.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
 
-class TProductCardHorizontal extends StatelessWidget {
-  const TProductCardHorizontal({super.key});
+class TProductCardHorizontal4 extends StatelessWidget {
+  const TProductCardHorizontal4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class TProductCardHorizontal extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TProductTitleText(
-                        title: "Green Nike Half Sleeves Shirt",
+                        title: "Green Nike Air shoes",
                         smallSize: true,
                       ),
                       SizedBox(
@@ -101,7 +101,7 @@ class TProductCardHorizontal extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       // Pricing
-                      Flexible(child: TProductPriceText(price: "256.0")),
+                      Flexible(child: TProductPriceText(price: "35.0")),
 
                       // Add to Cart
                       Container(

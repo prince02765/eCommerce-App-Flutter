@@ -39,16 +39,16 @@ class TVerticalImageText extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
-                child: TCircularImage(
-                  image: image,
-                  isNetworkImage: true,
-                  fit: BoxFit.cover,
-                ),
-                // child: Image(
-                //   image: AssetImage(image),
+                // child: TCircularImage(
+                //   image: image,
+                //   isNetworkImage: true,
                 //   fit: BoxFit.cover,
-                //   color: dark ? TColors.light : TColors.dark,
                 // ),
+                child: Image(
+                  image: AssetImage(image),
+                  fit: BoxFit.cover,
+                  color: dark ? TColors.light : TColors.dark,
+                ),
               ),
             ),
             // Text

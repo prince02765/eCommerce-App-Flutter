@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/brand/brand_show_case3.dart';
 import 'package:ecommerce_app/features/shop/models/category_model.dart';
 
 import '../../../../../common/widgets/layouts/grid_layout.dart';
@@ -10,8 +11,8 @@ import '../../../../../common/widgets/brand/brand_show_case.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
-class TCategoryTab extends StatelessWidget {
-  const TCategoryTab({super.key});
+class TCategoryTab3 extends StatelessWidget {
+  const TCategoryTab3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,11 @@ class TCategoryTab extends StatelessWidget {
           child: Column(
             children: [
               // Brands
-              const TBrandShowcase(
+              const TBrandShowcase3(
                 images: [
-                  TImages.productImage3,
-                  TImages.productImage2,
-                  TImages.productImage1
+                  TImages.productImage52,
+                  TImages.productImage53,
+                  TImages.productImage11
                 ],
               ),
               const SizedBox(
@@ -56,12 +57,12 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage1,
-                    sale: "25%",
+                    image: TImages.productImage51,
+                    sale: "10%",
                     color: Colors.red,
-                    title: "Green Nike Air shoes",
-                    brand: "Nike",
-                    price: "35.0",
+                    title: "Iphone 13 pro",
+                    brand: "iPhone",
+                    price: "840.0",
                   ),
                 ),
               ),
@@ -77,12 +78,12 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage2,
-                    sale: "15%",
+                    image: TImages.productImage12,
+                    sale: "16%",
                     color: Colors.grey,
-                    title: "White Nike Air shoes",
-                    brand: "Nike",
-                    price: "28.0",
+                    title: "Samsung Galaxy S9+",
+                    brand: "Samsung",
+                    price: "560.0",
                   ),
                 ),
               ),
@@ -98,12 +99,12 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage25,
+                    image: TImages.productImage38,
                     sale: "10%",
                     color: Colors.grey,
-                    title: "Nike Tracksuit Blue",
-                    brand: "Nike",
-                    price: "42.0",
+                    title: "Samsung kitchen Refrigerator",
+                    brand: "Samsung",
+                    price: "620.0",
                   ),
                 ),
               ),
@@ -119,12 +120,12 @@ class TCategoryTab extends StatelessWidget {
                     width: TSizes.spaceBtwItems,
                   ),
                   itemBuilder: (context, index) => TProductCardHorizontal(
-                    image: TImages.productImage28,
-                    sale: "12%",
+                    image: TImages.productImage57,
+                    sale: "32%",
                     color: Colors.red,
-                    title: "Adidas Football",
-                    brand: "Adidas",
-                    price: "52.0",
+                    title: "Acer Laptop var",
+                    brand: "Acer",
+                    price: "440.0",
                   ),
                 ),
               )
