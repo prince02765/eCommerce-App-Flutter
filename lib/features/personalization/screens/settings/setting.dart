@@ -106,7 +106,7 @@ class SettingScreen extends StatelessWidget {
                   TSettingsMenuTile(
                     icon: Iconsax.security_card,
                     title: "Acount Privacy",
-                    subTitle: "Manage data usage and conected accouts",
+                    subTitle: "Manage data usage and conected accouts ",
                     onTap: () => Get.to(() => PrivacyPolicyScreen()),
                   ),
 
